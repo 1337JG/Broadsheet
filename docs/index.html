@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Documentation of OSS Substrate</title>
+  <meta name="description" content="Documentation for the Broadsheet static portfolio and blog template." />
+  <link rel="stylesheet" href="blog/styles.css" />
+  <script defer src="main.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-name">Docs</div>
+    <div class="nav-links">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-text">Dark</span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="wrapper wrapper--reading">
+    <article>
+      <header class="article-header wrapper">
+        <div class="header-meta-row">
+          <span class="article-date">Feb 21, 2026</span>
+          <h1 class="article-title">Documentation of Broadsheet</h1>
+          <span class="article-author">by Jaydev</span>
+        </div>
+      </header>
+
+      <div class="article-content">
+
+        <h2>1. Overview</h2>
+        <p>
+          Broadsheet is a static HTML, CSS, and JavaScript portfolio and blog template.
+        </p>
+        <p>
+          <strong>It requires no framework, no build step, and no dependencies.</strong><br>
+          It works natively on any static hosting platform.
+        </p>
+
+        <h2>2. What’s Included</h2>
+        <p>Portfolio and blog are independent but share the same design system.</p>
+<pre><code>repo/
+│   index.html          (Portfolio)
+│   styles.css          (Portfolio styles)
+│   main.js             (Shared theme logic)
+│
+├───assets/
+│   └───fonts/
+│       ├── eb-garamond.woff2
+│       ├── ibm-plex-sans.woff2
+│       ├── resume.docx (Editable template)
+│       └── resume.pdf  (Sample export)
+│
+├───blog/
+│   │   index.html      (Blog list page)
+│   │   styles.css      (Blog styles)
+│   │
+│   └───entries/
+│       └── sample-post.html
+│
+└───docs/
+        index.html      (Documentation)</code></pre>
+
+        <h2>3. Setup</h2>
+        
+        <h3>Option 1 — Download ZIP</h3>
+        <p>Download the repository from GitHub and extract it.</p>
+
+        <h3>Option 2 — Clone</h3>
+<pre><code>git clone &lt;your-repo-url&gt;
+cd repo</code></pre>
+
+        <h3>Run Locally</h3>
+        <p>Use any static server to view your site locally:</p>
+<pre><code>npx serve .</code></pre>
+        <p>or</p>
+<pre><code>python -m http.server</code></pre>
+        <p><em>Note: Avoid opening files directly with <code>file://</code> in the browser, as relative paths and local storage may not resolve correctly.</em></p>
+
+        <h2>4. Customization</h2>
+        <p>All visual configuration is controlled through CSS variables defined at the top of <code>styles.css</code> (and <code>blog-styles.css</code>).</p>
+        
+        <p>Modify these variables to change colors, typography, and spacing:</p>
+<pre><code>:root {
+  --bg: #FFFFFF;
+  --text: #1A1C1E;
+  --text-sec: #5F6368;
+  --text-muted: #555;
+  --accent: #f3007e;
+  --border: rgba(0,0,0,0.08);
+
+  --font-display: "EB Garamond", serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+
+  --space-sm: 0.75rem;
+  --space-md: 1.5rem;
+  --space-lg: 3rem;
+
+  --radius: 4px;
+}</code></pre>
+
+        <p>Dark mode overrides are handled below the root variables:</p>
+<pre><code>html[data-theme="dark"] {
+  --bg: #121417;
+  --text: #f5f5f5;
+  --text-muted: #aaa;
+  --border: rgba(255,255,255,0.1);
+}</code></pre>
+
+        <h2>5. Using the Blog Skeleton</h2>
+        <p>To create a new blog post:</p>
+        <ol>
+          <li>Copy <code>/blog/entries/sample-post.html</code></li>
+          <li>Rename the file (e.g., <code>my-post.html</code>)</li>
+          <li>Update the inner text for:
+            <ul>
+              <li>Date</li>
+              <li>Title</li>
+              <li>Author</li>
+              <li>Content</li>
+            </ul>
+          </li>
+          <li>Add a link to the new post inside <code>/blog/index.html</code></li>
+        </ol>
+        <p>That’s it.</p>
+
+        <h2>6. Navigation Structure</h2>
+        <p>All paths are relative and designed for static hosting.</p>
+        <ul>
+          <li><code>index.html</code> → Portfolio homepage</li>
+          <li><code>/blog/index.html</code> → Blog list</li>
+          <li><code>/blog/entries/*.html</code> → Individual posts</li>
+          <li><code>/assets/</code> → Fonts and resume files</li>
+        </ul>
+
+        <h2>7. Deployment</h2>
+
+        <h3>GitHub Pages</h3>
+        <ol>
+          <li>Push your project to a GitHub repository.</li>
+          <li>Go to <strong>Repository Settings → Pages</strong>.</li>
+          <li>Select:
+            <ul>
+              <li>Branch: <code>main</code></li>
+              <li>Folder: <code>/ (root)</code></li>
+            </ul>
+          </li>
+          <li>Save. Your site will be live in a few minutes.</li>
+        </ol>
+
+        <h3>AWS S3</h3>
+        <p>Follow the official AWS guide for static website hosting:</p>
+        <p><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html" target="_blank" rel="noopener noreferrer">AWS S3 Static Website Hosting Guide</a></p>
+
+        <hr style="margin: 3rem 0; border: none; border-top: 1px solid var(--border);" />
+      </div>
+    </article>
+  </main>
+
+  <footer class="wrapper">
+    <p>© 2026 Jaydev</p>
+  </footer>
+
+</body>
+</html>
