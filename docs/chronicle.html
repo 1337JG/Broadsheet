@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>On the Matter of Broadsheet</title>
+  <meta name="robots" content="noindex, nofollow" /> <meta name="description" content="A secret chronicle of the Broadsheet substrate." />
+    <link rel="stylesheet" href="../../blog/styles.css" />
+  <script defer src="/main.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-name">Docs</div>
+    <div class="nav-links">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-text">Dark</span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="wrapper wrapper--reading">
+    <article>
+      <header class="article-header wrapper">
+        <div class="header-meta-row">
+          <span class="article-date">February 21, 2026</span>
+          <h1 class="article-title">On the Matter of Broadsheet</h1>
+          <span class="article-author">by Jaydev</span>
+        </div>
+      </header>
+
+      <div class="article-content">
+
+        <h2>I. Overview</h2>
+        <p>
+          This day I set forth an account of a most restrained contrivance, styled Broadsheet, devised for the cultivation of one’s digital presence.
+        </p>
+        <p>
+          It is composed solely of HTML, CSS, and JavaScript. No engines roar beneath it. No infernal machinery of build steps or dependencies intrudes upon its order. It rests upon any static host as calmly as a letter upon a writing desk.
+        </p>
+        <p>
+          In plainer terms: it works. Ayy chat we up.
+        </p>
+
+        <h2>II. Of Its Contents</h2>
+        <p>
+          The portfolio and the blog exist as siblings beneath one design philosophy, separate in chamber yet united in spirit.
+        </p>
+        <p>Within the repository one shall find:</p>
+        <ul>
+          <li><code>index.html</code>, the principal façade</li>
+          <li><code>styles.css</code>, wherein the visual temperament is governed</li>
+          <li><code>main.js</code>, keeper of thematic transitions</li>
+        </ul>
+        <p>
+          There are preserved within <code>/assets/</code> certain typefaces of dignified character, and templates for the résumé, both editable and exported.
+        </p>
+        <p>
+          Within <code>/blog/</code> lies the chronicle itself, with index and entries arranged in modest hierarchy.
+        </p>
+        <p>
+          Within <code>/docs/</code> this very testimony is housed.
+        </p>
+        <p>
+          Nothing superfluous. Nothing obscure. One might say the structure possesses moral clarity.
+        </p>
+
+        <h2>III. On the Act of Setup</h2>
+        <p>
+          One may obtain the work by downloading the repository entire and extracting it.
+        </p>
+        <p>To behold it locally, a simple static server shall suffice:</p>
+<pre><code>npx serve .</code></pre>
+        <p>or</p>
+<pre><code>python -m http.server</code></pre>
+        <p>
+          It is advised that one abstain from opening the files directly by means of <code>file://</code>, lest relative paths rebel and storage refuse obedience. Even modern contraptions demand ceremony.
+        </p>
+
+        <h2>IV. Concerning Customization</h2>
+        <p>
+          All visual disposition is governed through CSS variables declared at the head of the stylesheet.
+        </p>
+        <p>
+          Colors, typography, spacing, curvature of corners, all submit to these tokens. By altering them, one reshapes the entire aesthetic temperament without disturbing the structure itself.
+        </p>
+        <p>
+          Thus, the system remains stable while the appearance may evolve. Discipline before ornament.
+        </p>
+        <p>
+          Dark mode, too, is accounted for beneath the appropriate attribute selector. The night has been anticipated.
+        </p>
+
+        <h2>V. Of Authoring a New Entry</h2>
+        <p>
+          To compose a new post, one must duplicate the exemplar within <code>/blog/entries/</code>, rename it, amend its date, title, authorship, and contents, and thereafter append its link within the blog index.
+        </p>
+        <p>
+          No content management apparatus intrudes. The author converses directly with the file. There is something bracing in that simplicity.
+        </p>
+
+        <h2>VI. On Navigation</h2>
+        <p>
+          All paths are relative, as is proper for a structure intended to travel between hosts without injury.
+        </p>
+        <ul>
+          <li>The portfolio resides at the root.</li>
+          <li>The blog index within <code>/blog/</code>.</li>
+          <li>Entries beneath <code>/blog/entries/</code>.</li>
+          <li>Assets in their appointed directory.</li>
+        </ul>
+        <p>Order is preserved through restraint.</p>
+
+        <h2>VII. On Deployment</h2>
+        <p>
+          To publish by way of GitHub Pages, one must push the repository, select the main branch, designate the root, and commit the setting. In a matter of minutes, the site manifests publicly.
+        </p>
+        <p>
+          Should one prefer AWS S3, the official guide for static website hosting may be consulted and followed in due sequence.
+        </p>
+
+        <hr style="margin: 3rem 0; border: none; border-top: 1px solid var(--border);" />
+
+        <p>
+          Thus concludes the account of Broadsheet: a static instrument, free of fashionable excess, designed not for spectacle but for endurance.
+        </p>
+        <p style="font-size: 1.25rem; margin-top: 2rem;">
+          The age clamors for noise.<br>
+          This does not.
+        </p>
+
+      </div>
+    </article>
+  </main>
+
+  <footer class="wrapper">
+    <p>© 2026 Jaydev</p>
+  </footer>
+
+</body>
+</html>
